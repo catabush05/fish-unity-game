@@ -2003,7 +2003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 708393397}
   - component: {fileID: 708393398}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: background_terrain_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2019,8 +2019,8 @@ Transform:
   m_GameObject: {fileID: 708393396}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.6338, y: -0.34, z: 0}
-  m_LocalScale: {x: 198.39944, y: 19.05108, z: 24.517141}
+  m_LocalPosition: {x: 53.6338, y: -0.34, z: 1}
+  m_LocalScale: {x: 198.39944, y: 19.05108, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1936017936}
@@ -3232,7 +3232,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0
-  m_GravityScale: 0
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3257,7 +3257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Swim
   swimSpeed: 2.5
-  moveAmount: 0.01
+  moveAmount: 3
   uiDocument: {fileID: 1388989277}
   explosionEffect: {fileID: 2951868830930369597, guid: 9bfee1c007f1a479d8252d4762afa591, type: 3}
   followTarget: {fileID: 0}
@@ -5826,7 +5826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1936017936}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

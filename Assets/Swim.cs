@@ -28,25 +28,14 @@ public class Swim : MonoBehaviour
 
     void Update()
     {
+        // Constant forward motion
+        rb.linearVelocity = new Vector2(swimSpeed, rb.linearVelocity.y);
 
-        float move = 0f;
-
-        // Forward movement (W or Up Arrow)
-        if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
+        // "Flap" upwards when pressing W or Up Arrow
+        if (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.upArrowKey.wasPressedThisFrame)
         {
-            move = moveAmount;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, moveAmount);
         }
-        // Backward movement (S or Down Arrow)
-        else if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
-        {
-            move = -moveAmount;
-        }
-
-        // Apply movement and rotation (without deltaTime for now)
-        transform.Translate(swimSpeed * Time.deltaTime, 0, 0);
-        transform.Translate(0, move, 0);
-
-
     }
 
     void OnTriggerEnter2D(Collider2D collision)
